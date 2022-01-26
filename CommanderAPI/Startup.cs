@@ -1,7 +1,9 @@
+using CommanderAPI.Domain;
 using CommanderAPI.Domain.Commander;
 using CommanderAPI.Domain.Commander.Abstract;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -19,6 +21,9 @@ namespace CommanderAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer
+                (Configuration.GetConnectionString("CommanderConn")));
+
             services.AddControllers();
 
             services.AddScoped<ICommanderRepo, MockCommanderRepo>();
