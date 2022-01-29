@@ -26,7 +26,7 @@ namespace CommanderAPI
 
             services.AddControllers();
 
-            services.AddScoped<ICommanderRepo, MockCommanderRepo>();
+            services.AddScoped<ICommanderRepo, CommanderRepo>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
