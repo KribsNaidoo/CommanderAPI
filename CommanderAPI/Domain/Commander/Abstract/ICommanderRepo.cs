@@ -5,7 +5,9 @@ namespace CommanderAPI.Domain.Commander.Abstract
 {
     public interface ICommanderRepo
     {
+        bool SaveChanges();
         IEnumerable<Command> GetCommands();
         Command GetCommandById(int Id);
+        void CreateCommand(Command cmd);
     }
 }

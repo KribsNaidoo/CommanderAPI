@@ -10,6 +10,8 @@ namespace CommanderAPI.Profiles
         {
             CreateMap<Command, CommandReadDto>()
             .ForMember(dest => dest.Description, act => act.MapFrom(src => src.HowTo));
+
+            CreateMap<CommandCreateDto, Command>();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using CommanderAPI.Domain.Commander.Abstract;
 using CommanderAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,6 +22,21 @@ namespace CommanderAPI.Domain.Commander
         public Command GetCommandById(int Id)
         {
             return _commanderContext.Commands.FirstOrDefault(c => c.Id == Id);
+        }
+
+        public bool SaveChanges()
+        {
+            return (_commanderContext.SaveChanges() >= 0);
+        }
+
+        public void CreateCommand(Command cmd)
+        {
+            if(cmd == null)
+            {
+                throw new ArgumentNullException(nameof(cmd));
+            }
+
+            _commanderContext.Commands.Add(cmd);
         }
     }
 }

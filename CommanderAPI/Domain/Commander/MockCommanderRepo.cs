@@ -24,5 +24,15 @@ namespace CommanderAPI.Domain.Commander
         {
             return new Command { Id = 0, HowTo = "Boil an egg", Line = "Boil water", Platform = "Kettle & Pot" };
         }
+
+        public bool SaveChanges()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CreateCommand(Command cmd)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
