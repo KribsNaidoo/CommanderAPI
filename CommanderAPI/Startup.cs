@@ -1,3 +1,4 @@
+using AutoMapper;
 using CommanderAPI.Domain;
 using CommanderAPI.Domain.Commander;
 using CommanderAPI.Domain.Commander.Abstract;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace CommanderAPI
 {
@@ -25,6 +27,8 @@ namespace CommanderAPI
                 (Configuration.GetConnectionString("CommanderConn")));
 
             services.AddControllers();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<ICommanderRepo, CommanderRepo>();
         }

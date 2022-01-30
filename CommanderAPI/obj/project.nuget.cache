@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "A/GN7KT/kjCCVNAe018jOnpFyt6wOTBAaZ9geJuaa0jbxA4SDq6K6gbJtWyVS9mGCZ9mmnYRmVC0yD86MNnlqw==",
+  "dgSpecHash": "uLgkTKRnPNLgF8KCqqNiHyxEOkMbO/ppWOqgp4AxljVkoThlLKZOAxNuYdgX2pRlHs5NDzMo2M/iIqTkePPM/A==",
   "success": true,
   "projectFilePath": "C:\\CodeRepo\\Commander\\CommanderAPI\\CommanderAPI\\CommanderAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kribs\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\kribs\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\kribs\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\kribs\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\kribs\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
