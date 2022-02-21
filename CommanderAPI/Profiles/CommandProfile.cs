@@ -12,6 +12,7 @@ namespace CommanderAPI.Profiles
             .ForMember(dest => dest.Description, act => act.MapFrom(src => src.HowTo));
 
             CreateMap<CommandCreateDto, Command>();
+            CreateMap<CommandUpdateDto, Command>();
         }
     }
 }

@@ -38,5 +38,10 @@ namespace CommanderAPI.Domain.Commander
 
             _commanderContext.Commands.Add(cmd);
         }
+
+        public void UpdateCommand(Command cmd)
+        {
+            // Nothing
+        }
     }
 }

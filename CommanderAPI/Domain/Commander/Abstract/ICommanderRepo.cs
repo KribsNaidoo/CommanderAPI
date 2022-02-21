@@ -9,5 +9,6 @@ namespace CommanderAPI.Domain.Commander.Abstract
         IEnumerable<Command> GetCommands();
         Command GetCommandById(int Id);
         void CreateCommand(Command cmd);
+        void UpdateCommand(Command cmd);
     }
 }

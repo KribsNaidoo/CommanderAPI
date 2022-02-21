@@ -33,15 +33,13 @@ namespace CommanderAPI.Controllers
         {
             var commandItem = _commanderRepo.GetCommandById(id);
             
-            if(commandItem != null)
+            if(commandItem == null)
             {
-                return Ok(_mapper.Map<CommandReadDto>(commandItem));
+                return NotFound();                
             }
-            else
-            {
-                return NotFound();
-            }
-            
+
+            return Ok(_mapper.Map<CommandReadDto>(commandItem));
+
         }
 
         [HttpPost]
@@ -56,6 +54,23 @@ namespace CommanderAPI.Controllers
 
             return CreatedAtRoute(nameof(GetCommandById), new { id = commandResult.Id }, commandResult);
 
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult UpdateCommand(int id, CommandUpdateDto commandUpdate)
+        {
+            var commandItem = _commanderRepo.GetCommandById(id);
+
+            if (commandItem == null)
+            {
+                return NotFound();
+            }
+
+            _mapper.Map(commandUpdate, commandItem);
+            _commanderRepo.UpdateCommand(commandItem);
+            _commanderRepo.SaveChanges();
+            
+            return NoContent();
         }
     }
 }

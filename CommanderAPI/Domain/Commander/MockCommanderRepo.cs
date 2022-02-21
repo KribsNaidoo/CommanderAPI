@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CommanderAPI.Domain.Commander
 {
-    public class MockCommanderRepo : ICommanderRepo
+    public class MockCommanderRepo //: ICommanderRepo
     {
         public IEnumerable<Command> GetCommands()
         {
